@@ -15,6 +15,7 @@ console.log(ages);
 
  // Used the .length-1 method instead of the ages[2] do not know the length so use of .length-1 is used, took out 93.
  //// Test to push
+ ///test again
  console.log("number 1.a");
     console.log(ages[ages.length-1]); 
     
