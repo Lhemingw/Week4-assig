@@ -254,17 +254,19 @@ if (isHotOutside && moneyInPocket > 10.50){
 //guesstemate my pay will be, I can get a ruff idea.  I started out on creating a list of what categories I want in the financial app.
 //These are currently what I use.  I used an array to make the list, using the const variable.
 //It would be my goal to create this list going down, and with spaces under each category to fill in.
+console.log("number 13");
 const myLifeCategories = ['med&health', 'personal', 'food', 'ritsavings', 'regsavings'];
 console.log(myLifeCategories);
 
 //Below this I decided to get some ideas for making this financial app function, and used chatbot to get there.
+console.log("number 13.a");
 function calculateSpendingAmounts(salary) {
     const categories = {
-      category1: 0.2,
-      category2: 0.3,
-      category3: 0.25,
-      category4: 0.15,
-      category5: 0.1
+      RetirSaving: 0.2,
+      Personal: 0.3,
+      Housing: 0.25,
+      Food: 0.15,
+      savings: 0.1
     };
   
     const spendingAmounts = {};
@@ -277,5 +279,5 @@ function calculateSpendingAmounts(salary) {
     return spendingAmounts;
   }
   
-
+console.log(calculateSpendingAmounts(638));
 
