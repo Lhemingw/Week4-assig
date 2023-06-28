@@ -190,9 +190,9 @@ let someFunction = (a, b) => {
   let array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 50];
   let array2 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110,];
   let array3 = [ 3, 5, 7, 9, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35];
-  console.log(array(array1));
-  console.log(array(array2));
-  console.log(array(array3));
+  console.log(array1);
+  console.log(array2);
+  console.log(array3);
 
   //10Write a function that takes an array of 
   //numbers and returns the average of all the elements in the array.
