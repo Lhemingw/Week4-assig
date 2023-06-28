@@ -10,22 +10,27 @@ myArray[2] -- don't do this, it's not always the 3rd indexed item
     //set up the array with the [], I used const or let is good to use here, because we do not to change stuff.
     //I could have used a loop to iterates over each element in the array, but use of console was shorter
     console.log("number 1");
-const  ages = ["3", "9", "23", "64", "2", "8", "28", "93"];
+const  ages = [3, 9, 23, 64, 2, 8, 28, 93];
 console.log(ages);
 
  // Used the .length-1 method instead of the ages[2] do not know the length so use of .length-1 is used, took out 93.
  //// Test to push
  ///test again
+ const firstElement = ages.shift();
+ const lastElement = ages[ages.length -1];
  console.log("number 1.a");
     console.log(ages[ages.length-1]); 
+  let difference = lastElement - firstElement;
+  console.log(difference);
     
     //playing around-delete later
 //function removeElements(ages) {
     //while (ages.length > 0) {
 
-    //Adding a new age which is 16--out come is  9 in the array?? -9 is the # of # in the array 
+    //Adding a new age which is 16--out come is  9 in the array?? -9 is the # of # in the array
+    console.log(ages.unshift(3)); 
 console.log("number 1.b");
-    console.log(ages.push("16"));
+   console.log(ages.push(16));
 
     //printing the new ages
     console.log(ages);
@@ -36,14 +41,14 @@ console.log("number 1.b");
     //********Use a loop to iterate through the array and calculate the average age.********
     //Need to // to the other return sum to get them to work*****************
     // The .length will calculate the "length" of the average age, the [i] is to access the individual names or ages in the array
-    //during each iteration of the loop
+    //during each iteration of the loop divide the sum by ages.length
+    let sum = 0;
        for( var i =0;  i <ages.length; i++) {
-        console.log(ages[i]);
-       }
-       // return sum / i;
-        //}
-  
-
+        sum += ages[i];
+       
+      }
+        console.log(sum/ages.length);
+    
  //console.log(age(["3", "9", "23", "64", "2", "8", "28", "93"])); 
  
  //Array.prototype.average = function(){
@@ -71,17 +76,27 @@ console.log("number 2");
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 
 console.log(names);
- // How to get the names going down.
+ //2.a loop to iterate
  for (let i = 0; i < names.length; i++) {
     console.log(names[i]);  
  }
 
   //   2a.Use a loop to iterate through the array and calculate the average number of letters per name.
-  //In this example totalLetters is used to keep track of the sum of the legths of all names.
+  //In this example totalLetters is used to keep track of the total number of letters in all names.  Set to 0
   //Than we iterate throught the names using a loop and add the .length of each name to the let totalLetters =0 variable.
   //The is 0 is a simple way of starting, totalLetter is being used to track the sum of the length of all the names
+  //Use a for look to iterate over each element in the names array, access each name using names[i] and retrieve its length
+  //using .length property, add this length to totalLetters variable
   //after the loop, we calculate the average number of letters per name by dividing the totalLetters by the number of names in the array(names.length)
   //The result is stored in the averageLetter which is used to console.log it.  The [i] is used to acces the names or ages.
+  // FURTHER EXPLAINED--To explain the code snippet in a simpler way, you can break it down into the following steps:
+//1.We start by defining an array called `names` that contains a list of names.
+//2. We initialize a variable `totalLetter` to keep track of the total number of letters in all the names. We set it to 0 initially.
+//3. We use a `for` loop to iterate over each element in the `names` array.
+//4. Inside the loop, we access each name using `names[i]` and retrieve its length using the `.length` property. We add this length to the `totalLetter` variable.
+//5. After the loop finishes, we calculate the average number of letters per name. We assign the value of `names.length` (the total number of names) to the variable `averageLetters`.
+//Here's a simplified explanation:
+//"The code counts the total number of letters in a list of names. It starts with an array of names. Then, it iterates over each name and calculates its length. The lengths of all the names are added together to get the total number of letters. Finally, it calculates the average number of letters per name based on the total number of names."
   console.log("number2a.");
 names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];  
 let totalLetter = 0
@@ -105,9 +120,10 @@ console.log(names[names.length-1]);
 //made sure to use the firstElement to print that to the console, the use of name just creates
 //a list of names.  The use of shift modifies the original array by removing/returning the first element
 //I the index '[0]' even though we still know the first name is, I am thinking
-console.log("number 4");
+console.log("number 4");  //Need to disengage************************************************
 names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
-let firstElement = names[0];
+//let firstElement = names.shift();
+//let firstElement = names[0];
 console.log(firstElement); 
 //5.Create a new array called nameLengths. Write a loop to iterate over the previously 
 //created names array and add the length of each name to the nameLengths array.
@@ -129,7 +145,7 @@ console.log(nameLengths);
 //We just need the sum and the += to add nameLengths[i]
 console.log("number 6");
 let numbers = [1, 2, 3, 4, 5];
-let sum = 0;
+ sum = 0;
 
 for (let i = 0; i < nameLengths.length; i++) {
     sum += nameLengths[i];
@@ -164,20 +180,20 @@ let someFunction = (a, b) => {
 
   //**************************NEED TO DO // TO MAKE #2 WORK************************
   console.log("number 9");
-  function array(numbers) {
-    let sum = 0;
-    for (let i = 0; i < numbers.length; i++) {
-            sum += numbers[i];
+  //function array(numbers) {
+    //let sum = 0;
+    //for (let i = 0; i < numbers.length; i++) {
+           // sum += numbers[i];
         
-    }
-    return sum > 100;
-  }
+    //}
+    //return sum > 100;
+  //}
   let array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 50];
   let array2 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110,];
   let array3 = [ 3, 5, 7, 9, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35];
-  console.log(array(array1));
-  console.log(array(array2));
-  console.log(array(array3));
+  console.log(array1);
+  console.log(array2);
+  console.log(array3);
 
   //10Write a function that takes an array of 
   //numbers and returns the average of all the elements in the array.
@@ -196,7 +212,7 @@ console.log('average number of all elements in the array:', average);
 //My explanation if oneArray is greater than the average of the twoArray, the getAverage function is the function that calculates the average of an array
 // The use of === did not work because it compared the two.  I took the example of speakFriend in Week3, I figured out what to put in the console.log for the (a)
 //it still failed on me becuase the other inbetween stuff was wrong, and the speak Friend is more of comparing a statement, this is a greater than. 
-console.log("number 11");
+console.log("number 11"); //***************** */
 var oneArray = [ 3, 4,12, 14, 6, 7, 9, 18, 20, 10, 40];
 var twoArray = [6, 9, 4, 8, 5, 16, 18];
 
@@ -210,7 +226,7 @@ function arrays(oneArray, twoArray) {
         for (let i = 0; i < array.length; i++) {
             sum +=array[i];      
         }
-        return sum / array.length;      
+        //return sum / array.length;      
     }
 console.log(arrays(oneArray, twoArray));
 
